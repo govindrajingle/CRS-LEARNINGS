@@ -1,0 +1,25 @@
+<body>
+	<button onclick="openWindow()">Show new url window</button>
+
+	<div id="myDiv">
+		<iframe id="myFrame" style="display: none;" width="1280" height="720"></iframe>
+	</div>
+
+	<script>
+		function openWindow() {
+			// Get the iframe
+			var iframe = document.getElementById('myFrame');
+
+			// Set the source of the iframe
+			iframe.src = 'http://localhost:8080/IVEDA/GemReportDetailsData';
+
+			// Display the iframe
+			iframe.style.display = 'block';
+
+			// Set a timeout to hide the iframe after 10 seconds (10000 milliseconds)
+			setTimeout(function() {
+				iframe.style.display = 'none';
+			}, 10000);
+		}
+	</script>
+</body>
